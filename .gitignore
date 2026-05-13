@@ -1,0 +1,30 @@
+bin/
+obj/
+**/bin/
+**/obj/
+*.user
+*.suo
+*.vs
+.vscode/
+*.db
+*.log
+*.ide
+**/*.user
+**/*.suo
+**/*.vscode
+*.DS_Store
+*.ncb
+*.cache
+*.pdb
+*.sqlite
+*.sqlite3
+*.db3
+*.dotCover
+*.msscci
+*.generated.cs
+
+# Rider
+.idea/
+
+# npm
+node_modules/
