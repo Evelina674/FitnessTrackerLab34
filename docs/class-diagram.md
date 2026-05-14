@@ -1,3 +1,5 @@
+# FitnessTracker UML Diagram
+
 ```mermaid
 classDiagram
     direction LR
@@ -31,27 +33,12 @@ classDiagram
         +string Notes
     }
 
-    class TrainingSummary {
-        +int TotalActivities
-        +double TotalDurationMinutes
-        +double TotalDistanceKm
-    }
-
-    class UserProfile {
-        +Guid Id
-        +string Name
-        +double WeightKg
-        +double HeightCm
-    }
-
     class TrainingSession {
         +Guid Id
         +Guid UserId
         +DateTime Date
         +IReadOnlyList~ActivityRecord~ Activities
         +string Notes
-        +TotalDurationMinutes() double
-        +TotalActivities() int
     }
 
     class ActivityRecord {
@@ -62,31 +49,26 @@ classDiagram
     class Activity {
         <<abstract>>
         +string Name
-        +ActivityCategory Category
         +TimeSpan Duration
-        +Describe() string
     }
 
     class CardioActivity {
         +Distance Distance
-        +Describe() string
     }
 
     class StrengthActivity {
         +int Sets
         +int RepsPerSet
         +double WeightKg
-        +Describe() string
     }
 
     class Distance {
         +double Kilometers
     }
 
-    class ActivityCategory {
-        <<enum>>
-        Cardio
-        Strength
+    class UserProfile {
+        +Guid Id
+        +string Name
     }
 
     class IFitnessSessionRepository {
@@ -98,55 +80,18 @@ classDiagram
 
     class InMemoryFitnessSessionRepository {
         -List~TrainingSession~ sessions
-        +Add(session) void
-        +GetById(sessionId) TrainingSession
-        +GetForUser(userId) IReadOnlyList~TrainingSession~
     }
-
-    class JsonFitnessSessionRepository {
-        -string filePath
-        +LoadAsync() Task
-        +SaveAsync() Task
-        +Add(session) void
-        +GetById(sessionId) TrainingSession
-        +GetForUser(userId) IReadOnlyList~TrainingSession~
-    }
-
-    class FitnessAnalyticsService {
-        +GetTotalDuration(sessions) double
-        +GetTotalDistance(sessions) double
-        +GroupByCategory(sessions) Dictionary
-        +GetTopActivities(sessions) IReadOnlyList
-    }
-
-    class TESTING {
-        +UnitTests
-        +IntegrationTests
-        +Coverage
-        +QualityGate
-    }
-
-    Program --> FitnessTrackerService
-    FitnessTrackerService --> IFitnessSessionRepository
-    FitnessTrackerService --> CreateTrainingSessionRequest
-    FitnessTrackerService --> TrainingSummary
-
-    CreateTrainingSessionRequest --> ActivityInput
-    TrainingSession --> ActivityRecord
-    ActivityRecord --> Activity
 
     Activity <|-- CardioActivity
     Activity <|-- StrengthActivity
 
+    ActivityRecord --> Activity
+    TrainingSession --> ActivityRecord
     CardioActivity --> Distance
-    Activity --> ActivityCategory
-
-    UserProfile --> TrainingSession
 
     IFitnessSessionRepository <|.. InMemoryFitnessSessionRepository
-    IFitnessSessionRepository <|.. JsonFitnessSessionRepository
 
-    FitnessAnalyticsService --> TrainingSession
-    TESTING --> FitnessTrackerService
-    TESTING --> IFitnessSessionRepository
+    FitnessTrackerService --> IFitnessSessionRepository
+    FitnessTrackerService --> CreateTrainingSessionRequest
+    UserProfile --> TrainingSession
 ```
