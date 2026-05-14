@@ -54,6 +54,7 @@ FitnessTrackerLab34/
 ├── README.md
 ├── FitnessTracker.sln
 └── .github/workflows/
+```
 
 # Архітектура
 
