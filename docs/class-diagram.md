@@ -1,3 +1,4 @@
+```mermaid
 classDiagram
     direction LR
 
@@ -148,3 +149,4 @@ classDiagram
     FitnessAnalyticsService --> TrainingSession
     TESTING --> FitnessTrackerService
     TESTING --> IFitnessSessionRepository
+```
