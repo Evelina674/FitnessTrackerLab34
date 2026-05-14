@@ -1,59 +1,120 @@
-# Iteration 3 Report
+# Звіт по Iteration 3
 
-## Completed Work
+## Виконана робота
 
-During Iteration 3 the project was improved with:
+Під час Iteration 3 проєкт було покращено за рахунок:
 
-- Unit tests
-- Integration tests
-- Fault handling
-- Coverage support
-- Testing documentation
+- unit tests;
+- integration tests;
+- fault handling;
+- coverage support;
+- testing documentation;
+- quality gate.
 
-## Tests
+---
+
+# Тестування
+
+У проєкті реалізовано:
 
 - 20 Unit Tests
 - 8 Integration Tests
 - 28 Total Tests
 
-## Coverage
+---
 
-Coverage was collected using coverlet.
+# Coverage
 
-Current coverage result:
+Для збору coverage використовується coverlet.
+
+Coverage перевіряється через:
+
+dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+
+Поточний результат:
 
 - Domain coverage: 60%
 - Infrastructure coverage: 100%
 
-## Fault Handling
+---
 
-The following error scenarios are handled:
+# Fault Handling
 
-- Invalid user IDs
-- Invalid dates
-- Empty activities
-- Duplicate sessions
-- Negative values
-- Invalid repetitions and sets
+У проєкті реалізовано обробку:
 
-## Refactoring Improvements
+- неправильних User ID;
+- неправильних дат;
+- порожніх колекцій;
+- duplicate sessions;
+- від’ємних значень;
+- неправильних repetitions та sets;
+- null-значень.
 
-The following improvements were made:
+---
 
-- Cleaner validation rules
-- Better repository validation
-- Improved testability
-- Separation of concerns
+# Integration Tests
 
-## Remaining Risks Before Lab 37
+Було реалізовано integration tests для перевірки:
 
-The following risks still remain:
+- додавання тренувань;
+- отримання сесії за ID;
+- отримання тренувань користувача;
+- duplicate session validation;
+- repository logic;
+- sequential operations;
+- null handling;
+- retrieval logic.
 
-- No persistent database
-- No file-based repository
-- No authentication system
-- Limited application layer testing
+---
 
-## Conclusion
+# Архітектурні покращення
 
-Iteration 3 significantly improved project quality, stability, and reliability through automated testing and validation.
+Було виконано:
+
+- покращення validation logic;
+- покращення repository validation;
+- покращення testability;
+- separation of concerns;
+- підготовку до future extensions.
+
+---
+
+# Усунуті проблеми (Code Smells)
+
+Було усунуто:
+
+- зайві залежності;
+- дублювання validation logic;
+- неконтрольоване створення некоректних об’єктів;
+- слабку fault handling logic.
+
+---
+
+# Ризики перед Lab 37
+
+На даному етапі залишаються:
+
+- відсутність file persistence;
+- відсутність database layer;
+- обмежений console UI;
+- відсутність authentication system;
+- недостатнє покриття Application layer.
+
+---
+
+# Підготовка до Lab 37
+
+Проєкт підготовлений для:
+
+- release hardening;
+- додаткової документації;
+- DEMO preparation;
+- FINAL_REPORT;
+- USER_GUIDE;
+- DEVELOPER_GUIDE.
+
+---
+
+# Висновок
+
+Iteration 3 значно покращила стабільність, тестованість та якість проєкту через automated testing, integration tests, validation rules та quality gate.
