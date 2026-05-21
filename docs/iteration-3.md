@@ -17,9 +17,11 @@
 
 У проєкті реалізовано:
 
-- 20 Unit Tests
-- 8 Integration Tests
-- 28 Total Tests
+- 40 Automated Tests
+- Unit Tests
+- Integration Tests
+- Fault Handling Tests
+- 11 Integration/Fault Handling scenarios
 
 ---
 
@@ -94,7 +96,6 @@ dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
 
 На даному етапі залишаються:
 
-- відсутність file persistence;
 - відсутність database layer;
 - обмежений console UI;
 - відсутність authentication system;
