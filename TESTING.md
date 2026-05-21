@@ -8,12 +8,13 @@ The project contains:
 - Integration Tests
 - Fault Handling Tests
 
+
 ## Total Tests
 
-- 20 Unit Tests
-- 8 Integration Tests
-- 28 Total Tests
-
+- 40 Automated Tests
+- Unit Tests
+- Integration Tests
+- Fault Handling Tests
 ## Tested Components
 
 ### Domain
@@ -46,3 +47,4 @@ Run tests with coverage:
 
 ```bash
 dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=opencover
+```
