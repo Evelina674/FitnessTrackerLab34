@@ -127,14 +127,22 @@ FitnessTrackerLab34/
 
 ## Lab 37
 
-На фінальній ітерації планується:
+На цій фінальній ітерації реалізовано:
 
-- USER_GUIDE;
-- DEVELOPER_GUIDE;
-- FINAL_REPORT;
-- DEMO;
-- release documentation;
-- release hardening.
+- USER_GUIDE.md;
+- DEVELOPER_GUIDE.md;
+- TESTING.md;
+- CHANGELOG.md;
+- FINAL_REPORT.md;
+- DEMO.md;
+- docs/release-plan.md;
+- docs/syllabus-coverage.md;
+- docs/defense-qa.md;
+- release hardening;
+- фінальний рефакторинг;
+- підготовку релізу v1.0.0.
+
+Статус: Виконано
 
 ---
 
