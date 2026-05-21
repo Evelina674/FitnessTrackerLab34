@@ -90,14 +90,18 @@ FitnessTrackerLab34/
 
 ## Lab 35
 
-На наступній ітерації планується:
+На цій ітерації реалізовано:
 
-- розширення business logic;
-- persistence layer;
-- LINQ-запити;
+- persistence layer через JSON-файли;
+- JSON repository для збереження та завантаження тренувань;
+- Factory Pattern для створення активностей;
+- LINQ-запити (Sum, Where, OrderByDescending, GroupBy);
 - додаткові use cases;
-- fault handling;
-- розширення repository layer.
+- розширену business logic;
+- додаткові unit та integration тести;
+- IDataStore<T> abstraction;
+- аналітичний сервіс FitnessAnalyticsService;
+- підготовку до fault handling та quality gate.
 
 ---
 
