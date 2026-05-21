@@ -107,14 +107,21 @@ FitnessTrackerLab34/
 
 ## Lab 36
 
-На наступній ітерації планується:
+На цій ітерації реалізовано:
 
 - automated testing;
 - integration tests;
-- coverage reporting;
+- fault handling tests;
+- coverage reporting через Coverlet;
 - quality gate;
 - testing documentation;
 - CI testing pipeline.
+
+Поточний результат тестування:
+
+- 40 automated tests;
+- 11 integration/fault handling scenarios;
+- 0 failed tests.
 
 ---
 
