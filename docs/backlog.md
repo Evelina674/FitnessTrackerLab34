@@ -1,27 +1,59 @@
-# FitnessTracker Backlog
+# Product Backlog
 
 ## Ітерація 1 (Lab 34)
-- [x] Поставити завдання у vision.md
-- [x] Побудувати архітектуру solution зі шарами Domain/Application/Infrastructure/Console/Tests
-- [x] Реалізувати доменну модель тренувань та активностей
-- [x] Створити інтерфейс репозиторію та просту in-memory реалізацію
-- [x] Реалізувати сервіс FitnessTrackerService та методи для створення сесій
-- [x] Зробити консольне меню для одного вертикального сценарію
-- [x] Написати мінімум 5 юніт-тестів
-- [x] Створити README, .gitignore, CI workflow
-- [x] Описати діаграми та передачу в iteration-1.md
+
+- Створення структури solution
+- Domain модель
+- Application сервіси
+- InMemory Repository
+- Перший vertical slice
+- UML діаграми
+- Базові unit tests
+- GitHub CI
+
+Статус: Виконано
+
+---
 
 ## Ітерація 2 (Lab 35)
-- Розширити use cases: аналіз прогресу, збереження профілю
-- Додати файл persistence у Infrastructure
-- Реалізувати фільтрацію сесій за датою
-- Додати інтеграційні тести
+
+- JSON persistence
+- SaveAsync()
+- LoadAsync()
+- JSON Repository
+- Factory Pattern
+- Analytics Service
+- LINQ запити
+- Розширене меню
+- Додаткові бізнес-правила
+- 12+ нових тестів
+
+Статус: Виконано
+
+---
 
 ## Ітерація 3 (Lab 36)
-- Quality gate, coverage, fault handling
-- Розширити бізнес-логіку: тренувальні цілі, дієта
-- Додати мокування репозиторію у тестах
+
+- Integration Tests
+- Fault Handling
+- Coverage
+- Quality Gate
+- TESTING.md
+- Test Matrix
+- Coverage Report
+
+Статус: Заплановано
+
+---
 
 ## Ітерація 4 (Lab 37)
-- Release, документація, demo
-- Підготувати фінальний звіт і захист
+
+- USER_GUIDE
+- DEVELOPER_GUIDE
+- CHANGELOG
+- FINAL_REPORT
+- DEMO
+- Release v1.0.0
+- Documentation Update
+
+Статус: Заплановано
