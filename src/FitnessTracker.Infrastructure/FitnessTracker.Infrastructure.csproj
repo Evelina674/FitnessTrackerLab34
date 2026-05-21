@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\FitnessTracker.Domain\FitnessTracker.Domain.csproj" />
+    <ProjectReference Include="..\FitnessTracker.Application\FitnessTracker.Application.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
